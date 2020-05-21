@@ -57,7 +57,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     @property
     def token(self):
-        return self.generate_jwt_token()
+        return self._generate_jwt_token()
 
     def _generate_jwt_token(self):
         payload = jwt_payload_handler(self)
