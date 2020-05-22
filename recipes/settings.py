@@ -47,7 +47,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
-# CSRF_TRUSTED_ORIGINS = ['localhost:3000']
+CSRF_TRUSTED_ORIGINS = ['localhost:3000']
 ROOT_URLCONF = 'recipes.urls'
 
 TEMPLATES = [
@@ -152,4 +152,4 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# django_heroku.settings(locals())
+django_heroku.settings(locals())
