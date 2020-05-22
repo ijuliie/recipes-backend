@@ -14,7 +14,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'qn7uto*((uh28$o(rj_7@=h+il3j8u)w@du0hkwyqh-24!7awt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1', '*']
 
@@ -46,8 +46,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
-CSRF_TRUSTED_ORIGINS = ['localhost:3000']
+# CORS_ORIGIN_ALLOW_ALL = True
+# CSRF_TRUSTED_ORIGINS = ['localhost:3000']
 ROOT_URLCONF = 'recipes.urls'
 
 TEMPLATES = [
@@ -83,12 +83,12 @@ DATABASES = {
     }
 }
 
-# dj-database-url settings
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
-# Update database configuration with $DATABASE_URL.
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
+# # dj-database-url settings
+# db_from_env = dj_database_url.config()
+# DATABASES['default'].update(db_from_env)
+# # Update database configuration with $DATABASE_URL.
+# db_from_env = dj_database_url.config()
+# DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
