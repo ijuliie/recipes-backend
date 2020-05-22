@@ -36,7 +36,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'corsheader.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -83,12 +83,12 @@ DATABASES = {
     }
 }
 
-# dj-database-url settings
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
-# Update database configuration with $DATABASE_URL.
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
+# # dj-database-url settings
+# db_from_env = dj_database_url.config()
+# DATABASES['default'].update(db_from_env)
+# # Update database configuration with $DATABASE_URL.
+# db_from_env = dj_database_url.config()
+# DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -152,4 +152,4 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
